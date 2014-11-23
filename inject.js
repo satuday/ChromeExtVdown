@@ -9,9 +9,10 @@ var injected = injected || (function(){
 
   // This method will eventually return
   // background colors from the current page.
-  methods.getBgColors = function(){
-    var nodes = document.querySelectorAll('*');
-    return nodes.length;
+  methods.getVideo = function(){
+    //var nodes = document.querySelectorAll('*');
+    //return nodes.length;
+	return document.getElementById("video").getAttribute("src");
   };
 
   // This tells the script to listen for

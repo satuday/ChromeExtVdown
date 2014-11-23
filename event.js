@@ -6,15 +6,20 @@ function injectedMethod (tab, method, callback) {
   });
 }
 
-function getBgColors (tab) {
-  // When we get a result back from the getBgColors
-  // method, alert the data
-  injectedMethod(tab, 'getBgColors', function (response) {
-    alert('Elements in tab: ' + response.data);
+function getVideo (tab) {
+  injectedMethod(tab, 'getVideo', function (response) {
+	//alert(response.data);
+	downloadURI(response.data, "video");
     return true;
   });
 }
 
-// When the browser action is clicked, call the
-// getBgColors function.
-chrome.browserAction.onClicked.addListener(getBgColors);
+function downloadURI(uri, name) 
+{
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    link.click();
+}
+
+chrome.browserAction.onClicked.addListener(getVideo);

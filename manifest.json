@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "background-colorpeek",
+  "name": "download video",
   "version": "1.0",
-  "description": "Get every background-color from the current tab.",
+  "description": "Get video.",
 
   "browser_action": {
     "default_icon": "icon19.png"
@@ -13,6 +13,5 @@
     "scripts": ["event.js"],
     "persistent": false
   },
-  
-  "permissions": ["<all_urls>"]
+  "permissions": ["http://www.pluralsight.com/"]
 }
