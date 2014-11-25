@@ -6,12 +6,12 @@
   "description": "Get video.",
 
   "browser_action": {
-    "default_icon": "icon19.png"
+    "default_icon": "app/images/icon19.png"
   },
 
   "background": {
-    "scripts": ["event.js"],
+    "scripts": ["app/scripts/event.js"],
     "persistent": false
   },
-  "permissions": ["http://www.pluralsight.com/"]
+  "permissions": ["activeTab"]
 }
